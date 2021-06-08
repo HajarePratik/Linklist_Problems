@@ -41,5 +41,22 @@ public class Stack_Linklist_Test {
 		Assert.assertTrue(result);
 	}
 	
+	// UC3 test case to append node in linked list
+	@Test
+	public void givenThreeElements_whenLinked_shouldBeAddedAtEnd()
+	{
+		MyNode<Integer> firstNode = new MyNode<>(56); 	
+		MyNode<Integer> secondNode = new MyNode<>(30);
+		MyNode<Integer> thirdNode = new MyNode<>(70);
+		LinkedList linkedList = new LinkedList();
+		linkedList.append(firstNode);		// Append a Value Node to LinkedList
+		linkedList.append(secondNode);
+		linkedList.append(thirdNode);
+		linkedList.printMyNodes();
+		boolean result = linkedList.head.equals(firstNode) && linkedList.head.getNext().equals(secondNode)
+					&& linkedList.tail.equals(thirdNode);
+		Assert.assertTrue(result);
+	}
+	
 
 }
