@@ -12,6 +12,7 @@ public class LinkedList {
 		this.tail = null;		// constuctor of head,tail
 	}
 
+	// this method for adding a node for UC1
 	public void add(INode newNode) 	// Method to add Value to LinkedList
 	{
 		if (this.tail == null) 
@@ -30,7 +31,7 @@ public class LinkedList {
 		}
 	}
 	
-	
+	// this method for append a node for UC2
 	public void append(INode newNode)	// Method to append Value to LinkedList
 	{
 		if (this.head == null)
@@ -43,6 +44,15 @@ public class LinkedList {
 			this.tail = newNode;
 		}
 	}
+	
+	// this method for adding a element within particular node UC3
+	
+	public void insertmiddleNode(INode myNode,INode newNode) {
+        INode tempNode = myNode.getNext();
+        myNode.setNext(newNode);
+        newNode.setNext(tempNode);
+    
+    }
 		
 	public void printMyNodes()			// Method to Print Value to LinkedList
 	{
