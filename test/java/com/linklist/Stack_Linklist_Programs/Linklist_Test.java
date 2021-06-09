@@ -95,7 +95,7 @@ public class Linklist_Test {
 	
 	// UC6 test case to remove last value in node of linked list
 	  @Test
-	   public void given3NumberWhenDeletedLastNodePrintLinkedList() {
+	   public void given3element_WhenDeletedLastNodePrintLinkedList() {
 	        MyNode<Integer> myFirstNode = new MyNode<>(56);
 	        MyNode<Integer> mySecondNode = new MyNode<>(30);
 	        MyNode<Integer> myThirdNode = new MyNode<>(70);
