@@ -95,7 +95,7 @@ public class Linklist_Test {
 	
 	// UC6 test case to remove last value in node of linked list
 	  @Test
-	   public void given3NumberWhenDeletedLastNodePrintLinkedList() {
+	   public void given3elements_WhenDeletedLastNodePrintLinkedList() {
 	        MyNode<Integer> myFirstNode = new MyNode<>(56);
 	        MyNode<Integer> mySecondNode = new MyNode<>(30);
 	        MyNode<Integer> myThirdNode = new MyNode<>(70);
@@ -110,5 +110,21 @@ public class Linklist_Test {
 	                myLinkList.tail.equals(mySecondNode);
 	        Assert.assertTrue(result);
 	}
+	  
+	// UC7 test case to search value in node of linked list
+	  @Test
+	    public void given3NumberWhenSearchNodePrintLinkedList() {
+	        MyNode<Integer> myFirstNode = new MyNode<>(56);
+	        MyNode<Integer> mySecondNode = new MyNode<>(30);
+	        MyNode<Integer> myThirdNode = new MyNode<>(70);
+	        MyNode<Integer> found = new MyNode<>(0);
+	        LinkedList myLinkList = new LinkedList();
+	        myLinkList.add(myFirstNode);
+	        myLinkList.append(mySecondNode);
+	        myLinkList.append(myThirdNode);
+	        myLinkList.printMyNodes();
+	        boolean result = myLinkList.search(mySecondNode);
+	        Assert.assertTrue(result);
+	    } 
 
 }
