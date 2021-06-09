@@ -56,8 +56,8 @@ public class LinkedList {
 	// this method for remove a element within node UC5
 	public void pop() 
 	{
-        this.head = this.head.getNext();
-    }
+        	this.head = this.head.getNext();
+    	}
 		
 	// this method for remove a Last element within node UC6
 	 public void popLast() 
