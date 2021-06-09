@@ -74,6 +74,23 @@ public class Linklist_Test {
                 myLinkList.tail.equals(myThirdNode);
         Assert.assertTrue(result);
     }
-	
+
+	// UC5 test case to remove first value in node of linked list
+	  @Test
+	    public void given3elements_WhenDeletedFirstNodeLinkedList() {
+	        MyNode<Integer> myFirstNode = new MyNode<>(16);
+	        MyNode<Integer> mySecondNode = new MyNode<>(30);
+	        MyNode<Integer> myThirdNode = new MyNode<>(70);
+	        LinkedList myLinkList = new LinkedList();
+	        myLinkList.add(myFirstNode);
+	        myLinkList.append(mySecondNode);
+	        myLinkList.append(myThirdNode);
+	        myLinkList.printMyNodes();
+	        myLinkList.pop();
+	        myLinkList.printMyNodes();
+	        boolean result = myLinkList.head.equals(mySecondNode) &&
+	                myLinkList.tail.equals(myThirdNode);
+	        Assert.assertTrue(result);
+	    }
 
 }
