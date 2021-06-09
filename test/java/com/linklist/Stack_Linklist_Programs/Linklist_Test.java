@@ -113,7 +113,7 @@ public class Linklist_Test {
 	  
 	// UC7 test case to search value in node of linked list
 	  @Test
-	    public void given3NumberWhenSearchNodePrintLinkedList() {
+	    public void given3elements_WhenSearchNodePrintLinkedList() {
 	        MyNode<Integer> myFirstNode = new MyNode<>(56);
 	        MyNode<Integer> mySecondNode = new MyNode<>(30);
 	        MyNode<Integer> myThirdNode = new MyNode<>(70);
@@ -126,5 +126,29 @@ public class Linklist_Test {
 	        boolean result = myLinkList.search(mySecondNode);
 	        Assert.assertTrue(result);
 	    } 
+	  
+	  // UC8 test case adding a Extra value node of linked list
+	  @Test
+	    public void given3elements_WhenInsertedToSpecificNodePrintLinkedList() {
+	        MyNode<Integer> myFirstNode = new MyNode<>(56);
+	        MyNode<Integer> mySecondNode = new MyNode<>(30);
+	        MyNode<Integer> myThirdNode = new MyNode<>(70);
+	        MyNode<Integer> newNode = new MyNode<>(90);
+	        LinkedList myLinkList = new LinkedList();
+	        myLinkList.add(myFirstNode);
+	        myLinkList.append(mySecondNode);
+	        myLinkList.append(myThirdNode);
+	        myLinkList.printMyNodes();
+	        boolean check = myLinkList.search(mySecondNode);
+	        if (check)
+	            myLinkList.insertmiddleNode(mySecondNode, newNode);
+	        myLinkList.printMyNodes();
+	        INode newPosition = myLinkList.head.getNext();
+	        boolean result = myLinkList.head.equals(myFirstNode) &&
+	                myLinkList.head.getNext().equals(mySecondNode) &&
+	                newPosition.getNext().equals(newNode) &&
+	                myLinkList.tail.equals(myThirdNode);
+	        Assert.assertTrue(result);
+	    }
 
 }
