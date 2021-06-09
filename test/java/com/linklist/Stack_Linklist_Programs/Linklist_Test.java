@@ -113,7 +113,7 @@ public class Linklist_Test {
 	  
 	// UC7 test case to search value in node of linked list
 	  @Test
-	    public void given3NumberWhenSearchNodePrintLinkedList() {
+	    public void given3elements_WhenSearchNodePrintLinkedList() {
 	        MyNode<Integer> myFirstNode = new MyNode<>(56);
 	        MyNode<Integer> mySecondNode = new MyNode<>(30);
 	        MyNode<Integer> myThirdNode = new MyNode<>(70);
