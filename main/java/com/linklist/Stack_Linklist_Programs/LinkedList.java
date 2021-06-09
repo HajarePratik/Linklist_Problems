@@ -54,10 +54,23 @@ public class LinkedList {
     }
 	
 	// this method for remove a element within node UC5
-	public void pop() {
+	public void pop() 
+	{
         this.head = this.head.getNext();
     }
 		
+	// this method for remove a Last element within node UC6
+	 public void popLast() 
+	 {
+	        INode tempNode = head;
+	        while(!tempNode.getNext().equals(tail)) 
+	        {
+	            tempNode = tempNode.getNext();
+	        }
+	        this.tail = tempNode;
+	        tempNode.setNext(null);
+	  }
+	 
 	public void printMyNodes()			// Method to Print Value to LinkedList
 	{
 		StringBuffer myNodes = new StringBuffer("My Nodes :" );
